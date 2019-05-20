@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hwatutorial/widgets/shadow.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,14 +21,17 @@ class TutorailOnePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Text(
-      "Settings",
-      style: const TextStyle(
-          color: Colors.red,
-          fontWeight: FontWeight.w500,
-          fontFamily: "Akronim",
-          fontStyle: FontStyle.normal,
-          fontSize: 30),
+        child: ShadowWidget(
+          elevation: 30,
+      child: Text(
+        "Settings",
+        style: const TextStyle(
+            color: Colors.red,
+            fontWeight: FontWeight.w500,
+            fontFamily: "Akronim",
+            fontStyle: FontStyle.normal,
+            fontSize: 30),
+      ),
     ));
   }
 }
@@ -43,11 +47,13 @@ class TutorailButtonPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return OutlineButton(
       onPressed: () => this.onPress(),
-      child: Container(
-        height: 100,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.red, Colors.black], stops: [0.0, 0.5])),
+      child: ShadowWidget(
+        child: Container(
+          height: 100,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Colors.red, Colors.black], stops: [0.0, 0.5])),
+        ),
       ),
     );
   }
