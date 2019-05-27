@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hwatutorial/views/home.dart';
 import 'package:hwatutorial/widgets/shadow.dart';
 
 void main() => runApp(MyApp());
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
-        body: Center(child: TutorailButtonPage()),
+        body: HomeView(),
       ),
     );
   }
