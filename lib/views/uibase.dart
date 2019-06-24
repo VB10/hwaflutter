@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hwatutorial/widgets/list_item.dart';
+import 'package:hwatutorial/widgets/shadow.dart';
 
 class UIBaseView extends StatefulWidget {
   @override
@@ -7,8 +9,14 @@ class UIBaseView extends StatefulWidget {
 
 class _UIBaseViewState extends State<UIBaseView> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: Text("a"),
         leading: Icon(Icons.menu),
@@ -40,17 +48,34 @@ class _UIBaseViewState extends State<UIBaseView> {
       body: Container(
         decoration: BoxDecoration(
             border: Border.all(
-          color: Colors.black,
           width: 8.0,
         )),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             TextField(),
-            TextField(),
-            TextField(),
-            RaisedButton(onPressed: (){},)
+            CardListItem(
+              title: "a",
+              icons: Icons.accessibility,
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            ShadowWidget(
+              elevation: 5,
+              color: Colors.black,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CardListItem(
+                  title: "a",
+                  icons: Icons.accessibility,
+                ),
+              ),
+            ),
+            RaisedButton(
+              onPressed: () {},
+            )
           ],
         ),
       ),
