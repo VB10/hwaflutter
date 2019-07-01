@@ -7,7 +7,8 @@ class HomeView extends StatefulWidget {
   _HomeViewState createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeViewState extends State<HomeView>
+    with AutomaticKeepAliveClientMixin {
   String _data = "";
   bool _isDark;
 
@@ -37,6 +38,13 @@ class _HomeViewState extends State<HomeView> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(_data),
+            Visibility(
+              visible: _isDark,
+              child: Text(
+                "IS DARK $_isDark ",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
             Center(
               child: RaisedButton(
                 child: Icon(Icons.account_balance_wallet),
@@ -52,4 +60,8 @@ class _HomeViewState extends State<HomeView> {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }
