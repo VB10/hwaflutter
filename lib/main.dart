@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hwatutorial/httpHello.dart';
 import 'package:hwatutorial/tabbar_view.dart';
+import 'package:hwatutorial/views/json_placeholder_view.dart';
 import 'package:hwatutorial/views/uibase.dart';
 import 'package:hwatutorial/widgets/shadow.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: TabbarView(),
+      home: JsonPlaceHolderView(),
     );
   }
 }

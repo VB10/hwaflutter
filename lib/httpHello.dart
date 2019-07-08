@@ -11,7 +11,6 @@ class HttpHelloView extends StatefulWidget {
 class _HttpHelloViewState extends State<HttpHelloView> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -19,29 +18,10 @@ class _HttpHelloViewState extends State<HttpHelloView> {
     return (await http
             .get("https://hwasampleapi.firebaseio.com/api/books/0/author.json"))
         .body;
-
-    // setState(() {
-    //   this.isHaveData = !isHaveData;
-    //   this.data = data;
-    // });
   }
 
   @override
   Widget build(BuildContext context) {
-    // var columncenter = Center(
-    //         child: Column(
-    //           mainAxisAlignment: MainAxisAlignment.center,
-    //           children: <Widget>[
-    //             isHaveData ? Text(this.data) : CircularProgressIndicator(),
-    //             RaisedButton(
-    //               child: Text("Send Request"),
-    //               onPressed: () async {
-    //                 await getApiJohnName();
-    //               },
-    //             )
-    //           ],
-    //         ),
-    //       );
     return Scaffold(
       body: Center(
         child: FutureBuilder(
