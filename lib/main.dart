@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hwatutorial/httpHello.dart';
 import 'package:hwatutorial/shadow.dart';
-import 'package:hwatutorial/tabbar_view.dart';
+import 'package:hwatutorial/views/form_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
-import 'package:hwatutorial/views/uibase.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: JsonPlaceHolderView(),
+      routes: {
+        "/home": (context) => JsonPlaceHolderView(),
+        "/": (context) => FormView(),
+      },
     );
   }
 }
@@ -24,7 +25,7 @@ class TutorailOnePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: ShadowWidget(
-          elevation: 30,
+      elevation: 30,
       child: Text(
         "Settings",
         style: const TextStyle(
