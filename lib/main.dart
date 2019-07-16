@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hwatutorial/httpHello.dart';
 import 'package:hwatutorial/shadow.dart';
 import 'package:hwatutorial/views/form_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       routes: {
         "/home": (context) => JsonPlaceHolderView(),
-        "/": (context) => FormView(),
+        "/": (context) => HttpHelloView(),
       },
     );
   }
