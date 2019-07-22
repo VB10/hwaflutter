@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hwatutorial/shadow.dart';
+import 'package:hwatutorial/views/firebase_view.dart';
 import 'package:hwatutorial/views/form_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
 
@@ -10,9 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
+      initialRoute: "/firebase",
       routes: {
         "/home": (context) => JsonPlaceHolderView(),
         "/": (context) => FormView(),
+        "/firebase": (context) => FirebaseBookView(),
       },
     );
   }
