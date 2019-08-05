@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hwatutorial/shadow.dart';
+import 'package:hwatutorial/views/collapse_view.dart';
 import 'package:hwatutorial/views/firebase_view.dart';
 import 'package:hwatutorial/views/form_view.dart';
+import 'package:hwatutorial/views/html_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
 import 'package:hwatutorial/views/page_view.dart';
 
@@ -14,12 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/pageview",
+      initialRoute: "/html",
       routes: {
         "/http": (context) => HttpHelloView(),
         "/pageview": (context) => PageViewHWA(),
         "/home": (context) => JsonPlaceHolderView(),
         "/": (context) => FormView(),
+        "/html": (context) => HtmlView(),
+        "/collapse": (context) => CollapseView(),
         "/firebase": (context) => FirebaseBookView(),
       },
     );
