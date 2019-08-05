@@ -10,6 +10,8 @@ class CardListItem extends StatelessWidget {
 
   final double _textSize = 50;
 
+
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.getInstance()..init(context);

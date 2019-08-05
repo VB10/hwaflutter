@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:hwatutorial/viewmodel/user_view_model.dart';
 
 class HttpHelloView extends StatefulWidget {
   @override
@@ -12,6 +13,9 @@ class _HttpHelloViewState extends State<HttpHelloView> {
   @override
   void initState() {
     super.initState();
+    UserViewModel _userViewModel = UserViewModel(context, "asd", "asd");
+
+    print(_userViewModel.getFullUserName("name"));
   }
 
   Future getApiJohnName() async {

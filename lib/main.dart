@@ -3,6 +3,9 @@ import 'package:hwatutorial/shadow.dart';
 import 'package:hwatutorial/views/firebase_view.dart';
 import 'package:hwatutorial/views/form_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
+import 'package:hwatutorial/views/page_view.dart';
+
+import 'httpHello.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,8 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/firebase",
+      initialRoute: "/pageview",
       routes: {
+        "/http": (context) => HttpHelloView(),
+        "/pageview": (context) => PageViewHWA(),
         "/home": (context) => JsonPlaceHolderView(),
         "/": (context) => FormView(),
         "/firebase": (context) => FirebaseBookView(),
