@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hwatutorial/shadow.dart';
 import 'package:hwatutorial/views/collapse_view.dart';
+import 'package:hwatutorial/views/file_download_view.dart';
 import 'package:hwatutorial/views/firebase_view.dart';
 import 'package:hwatutorial/views/form_view.dart';
 import 'package:hwatutorial/views/html_view.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/html",
+      initialRoute: "/file",
       routes: {
         "/http": (context) => HttpHelloView(),
         "/pageview": (context) => PageViewHWA(),
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "/html": (context) => HtmlView(),
         "/collapse": (context) => CollapseView(),
         "/firebase": (context) => FirebaseBookView(),
+        "/file": (context) => FileDownloadView(),
       },
     );
   }
