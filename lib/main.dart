@@ -7,6 +7,7 @@ import 'package:hwatutorial/views/form_view.dart';
 import 'package:hwatutorial/views/html_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
 import 'package:hwatutorial/views/page_view.dart';
+import 'package:hwatutorial/views/sliver_view.dart';
 
 import 'httpHello.dart';
 
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/file",
+      initialRoute: "/sliver",
       routes: {
         "/http": (context) => HttpHelloView(),
+        "/sliver": (context) => SliverView(),
         "/pageview": (context) => PageViewHWA(),
         "/home": (context) => JsonPlaceHolderView(),
         "/": (context) => FormView(),
