@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hwatutorial/core/transitions/fade_route.dart';
+import 'package:hwatutorial/core/transitions/size_route.dart';
 
 class SliverView extends StatefulWidget {
   @override
@@ -6,6 +8,11 @@ class SliverView extends StatefulWidget {
 }
 
 class _SliverViewState extends State<SliverView> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,12 +44,12 @@ class _SliverViewState extends State<SliverView> {
               Text("a"),
               Text("a"),
               Text("a"),
-               Text("a"),
               Text("a"),
               Text("a"),
               Text("a"),
               Text("a"),
-               Text("a"),
+              Text("a"),
+              Text("a"),
               Text("a"),
               Text("a"),
               Text("a"),
@@ -63,3 +70,5 @@ class _SliverViewState extends State<SliverView> {
     );
   }
 }
+
+class DetailScreen {}
