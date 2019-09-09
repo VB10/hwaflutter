@@ -4,6 +4,7 @@ import 'package:hwatutorial/views/collapse_view.dart';
 import 'package:hwatutorial/views/file_download_view.dart';
 import 'package:hwatutorial/views/firebase_view.dart';
 import 'package:hwatutorial/views/form_view.dart';
+import 'package:hwatutorial/views/hero/hero_view.dart';
 import 'package:hwatutorial/views/html_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
 import 'package:hwatutorial/views/page_view.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/",
+      initialRoute: "/hero",
       routes: {
         "/http": (context) => HttpHelloView(),
         "/sliver": (context) => SliverView(),
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         "/file": (context) => FileDownloadView(),
         "/routehome":(context) => HomeView(),
         "/routedetail":(context) => DetailView(),
+        "/hero":(context) => HeroView(),
       },
     );
   }
