@@ -24,6 +24,7 @@ dependencies:
   flutter_html: 0.10.4
   path_provider: 1.2.0
   logger: 0.7.0+2
+  shared_preferences: 0.5.3+4
 
   open_file: 2.0.3
 

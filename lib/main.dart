@@ -3,10 +3,13 @@ import 'package:hwatutorial/shadow.dart';
 import 'package:hwatutorial/views/collapse_view.dart';
 import 'package:hwatutorial/views/file_download_view.dart';
 import 'package:hwatutorial/views/firebase_view.dart';
+import 'package:hwatutorial/views/flutter_state_view.dart';
 import 'package:hwatutorial/views/form_view.dart';
+import 'package:hwatutorial/views/hero/hero_view.dart';
 import 'package:hwatutorial/views/html_view.dart';
 import 'package:hwatutorial/views/json_placeholder_view.dart';
 import 'package:hwatutorial/views/page_view.dart';
+import 'package:hwatutorial/views/preferences/shared_view.dart';
 import 'package:hwatutorial/views/routing/detail_view.dart';
 import 'package:hwatutorial/views/routing/home_view.dart';
 import 'package:hwatutorial/views/sliver_view.dart';
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/",
+      initialRoute: "/advanced",
       routes: {
         "/http": (context) => HttpHelloView(),
         "/sliver": (context) => SliverView(),
@@ -33,6 +36,10 @@ class MyApp extends StatelessWidget {
         "/file": (context) => FileDownloadView(),
         "/routehome":(context) => HomeView(),
         "/routedetail":(context) => DetailView(),
+        "/hero":(context) => HeroView(),
+        "/shared":(context) => SharedView(),
+        "/advanced":(context) => AdvanceStateView(),
+     
       },
     );
   }
@@ -81,3 +88,4 @@ class TutorailButtonPage extends StatelessWidget {
     );
   }
 }
+
