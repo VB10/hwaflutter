@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hwatutorial/shadow.dart';
 import 'package:hwatutorial/views/collapse_view.dart';
+import 'package:hwatutorial/views/combo/banner_table_view.dart';
+import 'package:hwatutorial/views/combo/popup_chip_view.dart';
 import 'package:hwatutorial/views/file_download_view.dart';
 import 'package:hwatutorial/views/firebase_view.dart';
 import 'package:hwatutorial/views/flutter_state_view.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/advanced",
+      initialRoute: "/chipup",
       routes: {
         "/http": (context) => HttpHelloView(),
         "/sliver": (context) => SliverView(),
@@ -39,6 +41,9 @@ class MyApp extends StatelessWidget {
         "/hero":(context) => HeroView(),
         "/shared":(context) => SharedView(),
         "/advanced":(context) => AdvanceStateView(),
+        "/chipup":(context) => PopupChipView(),
+        "/bannertable":(context) => BannerTableView(),
+        
      
       },
     );
