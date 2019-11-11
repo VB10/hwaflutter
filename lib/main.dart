@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hwatutorial/shadow.dart';
+import 'package:hwatutorial/views/animation/animation_view.dart';
 import 'package:hwatutorial/views/collapse_view.dart';
 import 'package:hwatutorial/views/combo/banner_table_view.dart';
 import 'package:hwatutorial/views/combo/popup_chip_view.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/chipup",
+      initialRoute: "/animation",
       routes: {
         "/http": (context) => HttpHelloView(),
         "/sliver": (context) => SliverView(),
@@ -36,15 +37,14 @@ class MyApp extends StatelessWidget {
         "/collapse": (context) => CollapseView(),
         "/firebase": (context) => FirebaseBookView(),
         "/file": (context) => FileDownloadView(),
-        "/routehome":(context) => HomeView(),
-        "/routedetail":(context) => DetailView(),
-        "/hero":(context) => HeroView(),
-        "/shared":(context) => SharedView(),
-        "/advanced":(context) => AdvanceStateView(),
-        "/chipup":(context) => PopupChipView(),
-        "/bannertable":(context) => BannerTableView(),
-        
-     
+        "/routehome": (context) => HomeView(),
+        "/routedetail": (context) => DetailView(),
+        "/hero": (context) => HeroView(),
+        "/shared": (context) => SharedView(),
+        "/advanced": (context) => AdvanceStateView(),
+        "/chipup": (context) => PopupChipView(),
+        "/bannertable": (context) => BannerTableView(),
+        "/animation": (context) => AnimationView(),
       },
     );
   }
@@ -93,4 +93,3 @@ class TutorailButtonPage extends StatelessWidget {
     );
   }
 }
-
