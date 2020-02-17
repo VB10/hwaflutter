@@ -1,4 +1,6 @@
-class PostData {
+import 'package:hwatutorial/core/base/baseModel.dart';
+
+class PostData extends BaseModel {
   int userId;
   int id;
   String title;
@@ -20,5 +22,10 @@ class PostData {
     data['title'] = this.title;
     data['body'] = this.body;
     return data;
+  }
+
+  @override
+  fromJson(Map<String, Object> json) {
+    return PostData.fromJson(json);
   }
 }

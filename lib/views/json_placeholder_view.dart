@@ -1,8 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:hwatutorial/core/preferences/shared_manager.dart';
 import 'package:hwatutorial/model/post.dart';
 import 'package:http/http.dart' as http;
+import 'package:logger/logger.dart';
+
+import '../model/post.dart';
 
 class JsonPlaceHolderView extends StatefulWidget {
   @override
@@ -17,12 +21,18 @@ class _JsonPlaceHolderViewState extends State<JsonPlaceHolderView> {
 
   Future<PostData> getJsonPlaceHolderDatas() async {
     final _response =
-        await http.get("https://jsonplaceholder.typicode.com/posts/1xx");
+        await http.get("https://jsonplaceholder.typicode.com/posts/1");
     if (_response.statusCode == 404) {
       return null;
     }
     final _mapJson = json.decode(_response.body);
     var post = PostData.fromJson(_mapJson);
+    await SharedManager.instance.saveJsonModel(SharedKeys.postData, post);
+    var x =
+        SharedManager.instance.getJsonModel(PostData(), SharedKeys.postData);
+
+    Logger().i(
+        SharedManager.instance.getJsonModel(PostData(), SharedKeys.postData));
     return post;
   }
 
